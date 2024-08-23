@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #262525;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1000px;
+            background-color:white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(32, 41, 117, 0.1);
+            border-radius: 2%;
+        }
+
+        .content, .form-popup {
+            flex: 1;
+            min-width: 300px;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            padding-right: 20px;
+        }
+        
+        .form-container {
+            width: 100%;
+            padding: 10px;
+            background-color: white;
+        }
+        
+        .form-container input[type=text], .form-container input[type=email], .form-container textarea {
+            width: calc(100% - 30px);
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            background: #f1f1f1;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        .form-container input[type=text]:focus, .form-container input[type=email]:focus, .form-container textarea:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+        
+        .form-container .btn {
+            background-color: #3877FF;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: calc(100% - 30px);
+            margin-top: 10px;
+            opacity: 0.9;
+            border-radius: 4px;
+        }
+        
+        .form-container .btn:hover {
+            opacity: 1;
+        }
+        .content .icon{
+            display: flex;
+            column-gap: 0.5cap;
+            margin-top: 0px ;
+        }
+        .content .icon .ico{
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">  
+            <h2>Let's get in touch</h2>
+            <p>I enjoy discussing new projects and design challenges. Please share as much info as possible so we can get the most out of our first catch-up.</p>
+            <div class="icon">
+            <p class="ico"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="50" viewBox="0 0 30 30">
+                <path d="M 4 5 C 2.9069372 5 2 5.9069372 2 7 L 2 23 C 2 24.093063 2.9069372 25 4 25 L 26 25 C 27.093063 25 28 24.093063 28 23 L 28 7 C 28 5.9069372 27.093063 5 26 5 L 4 5 z M 6.6992188 7 L 23.300781 7 L 15 13.134766 L 6.6992188 7 z M 5 9.4746094 L 15 16.865234 L 25 9.4746094 L 25 23 L 5 23 L 5 9.4746094 z"></path>
+                </svg>
+            </p>
+            <h3>apal20175@gmail.com</h3>
+            </div>
+        </div>
+
+        <div class="form-popup" id="myForm">
+            <form class="form-container" action="https://formspree.io/f/xrbzyjnn" method="POST">
+                <h1>Contact Us</h1>
+
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Enter Name" name="name" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Enter Email" name="email" required>
+
+                <label for="message"><b>Message</b></label>
+                <textarea placeholder="Message" name="text" rows="5" required></textarea>
+                
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
